@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdf6e3, #d2fdff);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #004d66;
+            color: #fff;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #33ccff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 64px;
+            font-weight: bold;
+            color: #004d66;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 200px;
+            margin: auto;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            font-size: 16px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(-10px);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #004d66;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #33ccff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="logo.png" alt="My Logo" style="height: 50px;">
+            <div id="current-time" style="color: white; font-size: 18px; font-weight: bold;"></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="personal.html">Personal</a>
+            <a href="education.html">Education</a>
+            <a href="exp.html">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <h1 class="title">Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="education.html">
+                <img src="uitm.png" alt="Image 1">
+                <div class="gallery-caption">UiTM</div>
+            </a>
+        </div>
+    
+        <div class="gallery-item">
+            <a href="education.html">
+                <img src="smkbbsb.png" alt="Image 2">
+                <div class="gallery-caption">SMKBBSB</div>
+            </a>
+        </div>
+    
+        <div class="gallery-item">
+            <a href="education.html">
+                <img src="sksp.webp" alt="Image 3">
+                <div class="gallery-caption">SKSP</div>
+            </a>
+        </div>
+    
+        <div class="gallery-item">
+            <a href="education.html">
+                <img src="skbbsb.png" alt="Image 4">
+                <div class="gallery-caption">SKBBSB4</div>
+            </a>
+        </div>
+    
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="aku.jpg" alt="Image 5">
+                <div class="gallery-caption">Amzar</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="akip.JPG" alt="Image 5">
+                <div class="gallery-caption">Akif</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="ayah.jpg" alt="Image 5">
+                <div class="gallery-caption">My dad</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="gam.jpg" alt="Image 5">
+                <div class="gallery-caption">Amzar also</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="ibu dan ayah 2.JPG" alt="Image 5">
+                <div class="gallery-caption">My parents</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="ibu dan ayah.jpg" alt="Image 5">
+                <div class="gallery-caption">Old photo of my parents</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="ibu.jpg" alt="Image 5">
+                <div class="gallery-caption">My mom</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="index.html">
+                <img src="lechat.jpg" alt="Image 5">
+                <div class="gallery-caption">Cute cat!</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="ME.jpg" alt="Image 5">
+                <div class="gallery-caption">Me!</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="whole fam 2.JPG" alt="Image 5">
+                <div class="gallery-caption">My whole family</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="family.html">
+                <img src="raya.jpg" alt="Image 5">
+                <div class="gallery-caption">My whole family 2</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me naim.jpg" alt="Image 5">
+                <div class="gallery-caption">Intern</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 1.jpg" alt="Image 5">
+                <div class="gallery-caption">AGM</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 2.jpg" alt="Image 5">
+                <div class="gallery-caption">Wide Picture</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 3.jpg" alt="Image 5">
+                <div class="gallery-caption">After performance</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 4.jpg" alt="Image 5">
+                <div class="gallery-caption">Brass Band Seniors</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 5.jpg" alt="Image 5">
+                <div class="gallery-caption">Flute Junior!</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 6.jpg" alt="Image 5">
+                <div class="gallery-caption">Gang</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me 7.jpg" alt="Image 5">
+                <div class="gallery-caption">Another flute junior!</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="personal.html">
+                <img src="me adib.JPG" alt="Image 5">
+                <div class="gallery-caption">Me and Adib performing!</div>
+            </a>
+        </div>
+        
+    </div>
+
+    <div class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑
+    </div>
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+    
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

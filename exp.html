@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdf6e3, #d2fdff);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #004d66;
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #33ccff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 64px;
+            font-weight: bold;
+            color: #004d66;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .experience-item:hover {
+            transform: scale(1.02);
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-item h3 {
+            font-size: 28px;
+            color: #004d66;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item h4 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #004d66;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #33ccff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img src="logo.png" alt="My Logo" style="height: 50px;">
+            <div id="current-time" style="color: white; font-size: 18px;"></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="personal.html">Personal</a>
+            <a href="education.html">Education</a>
+            <a href="exp.html">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="title">Experience</h1>
+        <div class="experience-item" data-title="IT Support Intern">
+            <h3>IT Support Intern</h3>
+            <h4>Majlis Perbandaran Selayang | July 2024 - September 2024</h4>
+            <p>
+                Assisted in maintaining and troubleshooting the municipal IT systems. Developed and deployed a dynamic web application 
+                to streamline employee workflows, improving team productivity by 30%. Provided technical support for hardware 
+                and software issues across various departments.
+            </p>
+        </div>
+
+        <div class="experience-item" data-title="Freelance Graphic Designer">
+            <h3>Freelance Graphic Designer</h3>
+            <h4>Self-Employed | January 2021 - Present</h4>
+            <p>
+                Designed creative marketing materials, including logos, posters, and social media content for clients across various industries. 
+                Delivered personalized branding solutions tailored to client needs, improving their online presence and customer engagement. 
+                Specialized in Adobe Photoshop and Illustrator.
+            </p>
+        </div>
+
+        <div class="experience-item" data-title="Part-Time Barista">
+            <h3>Part-Time Barista</h3>
+            <h4>ZUS Coffee | February 2024 - March 2024</h4>
+            <p>
+                Prepared and served high-quality coffee and beverages while ensuring excellent customer service. Managed daily stock 
+                and inventory, maintaining a clean and organized workspace. Collaborated with teammates to create a welcoming café 
+                atmosphere and handle peak-hour operations efficiently.
+            </p>
+        </div>
+
+        <div class="experience-item" data-title="Part-Time Cashier/Barista">
+            <h3>Part-Time Cashier/Barista</h3>
+            <h4>COOLBLOG | August 2023 - October 2023</h4>
+            <p>
+                Handled customer orders for specialty drinks and desserts, ensuring accuracy and efficiency. Operated the point-of-sale 
+                (POS) system, managed transactions, and balanced cash registers. Maintained cleanliness and hygiene standards 
+                to provide customers with a pleasant experience.
+            </p>
+        </div>
+
+        <div class="experience-item" data-title="Part-Time Shop Helper">
+            <h3>Part-Time Shop Helper</h3>
+            <h4>H&M | February 2022 - September 2022</h4>
+            <p>
+                Assisted customers in finding products, offering styling suggestions to enhance their shopping experience. 
+                Restocked shelves, organized displays, and ensured the store was clean and visually appealing. Supported the team during 
+                peak hours and promotional sales events.
+            </p>
+        </div>
+    </div>
+
+    <div class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        ↑
+    </div>
+    <script>
+        const notificationSound = new Audio('oof.mp3');
+    
+        const experienceItems = document.querySelectorAll('.experience-item');
+        experienceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const title = item.getAttribute('data-title');
+                notificationSound.play();
+                alert(`You clicked on: ${title}`);
+            });
+        });
+    
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdf6e3, #d2fdff);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #004d66;
+            color: #fff;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #33ccff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 64px;
+            font-weight: bold;
+            color: #004d66;
+            margin-bottom: 30px;
+        }
+
+        .friend-list {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .friend-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #d2fdff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .friend-item:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .friend-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .friend-item .details {
+            flex: 1;
+        }
+
+        .friend-item .details h3 {
+            font-size: 24px;
+            color: #004d66;
+            margin-bottom: 5px;
+        }
+
+        .friend-item .details p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .friend-item a {
+            text-decoration: none;
+            color: #004d66;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .friend-item a:hover {
+            color: #33ccff;
+        }
+
+        .table-section {
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #004d66;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        th {
+            background-color: #004d66;
+            color: #fff;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #004d66;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #33ccff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="My Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="personal.html">Personal</a>
+            <a href="hobby.html">Hobby</a>
+            <a href="friend.html">Friends</a>
+            <a href="education.html">Education</a>
+            <a href="exp.html">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="title">My Friends</h1>
+
+        <div class="friend-list">
+            <div class="friend-item">
+                <img src="akip.JPG" alt="Friend 1">
+                <div class="details">
+                    <h3>Akif</h3>
+                    <p>Akif is my boyfriend. He always helps me whenever I need help and are in a serious situation.</p>
+                    <a href="https://wa.me/60177811645">Contact Akif</a>
+                </div>
+            </div>
+
+            <div class="friend-item">
+                <img src="heheh.jpg" alt="Friend 2">
+                <div class="details">
+                    <h3>Arif</h3>
+                    <p>Jane is a tech enthusiast and an amazing problem solver.</p>
+                    <a href="mailto:jane@example.com">Contact Jane</a>
+                </div>
+            </div>
+
+            <div class="friend-item">
+                <img src="heheh.jpg" alt="Friend 2">
+                <div class="details">
+                    <h3>Aqil</h3>
+                    <p>Jane is a tech enthusiast and an amazing problem solver.</p>
+                    <a href="mailto:jane@example.com">Contact Jane</a>
+                </div>
+            </div>
+
+            <div class="friend-item">
+                <img src="heheh.jpg" alt="Friend 2">
+                <div class="details">
+                    <h3>Jane Smith</h3>
+                    <p>Jane is a tech enthusiast and an amazing problem solver.</p>
+                    <a href="mailto:jane@example.com">Contact Jane</a>
+                </div>
+            </div>
+
+            <div class="friend-item">
+                <img src="heheh.jpg" alt="Friend 2">
+                <div class="details">
+                    <h3>Jane Smith</h3>
+                    <p>Jane is a tech enthusiast and an amazing problem solver.</p>
+                    <a href="mailto:jane@example.com">Contact Jane</a>
+                </div>
+            </div>
+
+            <div class="friend-item">
+                <img src="heheh.jpg" alt="Friend 2">
+                <div class="details">
+                    <h3>Jane Smith</h3>
+                    <p>Jane is a tech enthusiast and an amazing problem solver.</p>
+                    <a href="mailto:jane@example.com">Contact Jane</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h2>Activities with Friends</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hiking</td>
+                        <td>Blue Mountains</td>
+                        <td>March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Game Night</td>
+                        <td>John's House</td>
+                        <td>April 10, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="back-link">&#8592; Back to Home</a>
+    </div>
+</body>
+</html>
